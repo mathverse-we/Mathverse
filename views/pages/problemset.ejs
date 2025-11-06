@@ -1,0 +1,25 @@
+<% layout("layouts/main") %>
+
+
+  <table border="0">
+    <tr>
+      <th class="problem-header">#</th>
+      <th class="problem-header">Name</th>
+      <th class="problem-header">Level</th>
+    </tr>
+    <% for(let problem of allproblems){ %>
+        <tr>
+            
+                <td>
+                    <a href="/problemset/<%=problem._id%>" class="problem-link"><%= problem.problemNumber%></a>
+                </td>
+                <td>
+                    <a href="/problemset/<%=problem._id%>" class="problem-link"><%= problem.title%></a>
+                </td>
+                <td>
+                    <a href="/problemset/<%=problem._id%>" class="problem-link"><%= problem.difficulty%></a>
+                </td>
+        </tr>
+    <%}%>
+  </table>
+</div>
